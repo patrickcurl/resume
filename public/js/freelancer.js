@@ -36,7 +36,7 @@ function init_masonry(){
 
 $('a[href="#portfolio-tab"]').on('shown', function (e){
 
-    init_masonry();
+    // init_masonry();
 
     window.setTimeout(function() {
 
@@ -86,3 +86,17 @@ function center_map(){
         }, 500);
 
 };
+
+// $(window).load(function(){
+
+// $('a[name=popover]').popover({
+//     trigger: "click",
+//     title: "More info..."
+// });
+// $(function () {
+//     $('#myTab a:last').tab('show')
+//   });
+// // $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+// //   $(e.target).addClass('active'); // activated tab
+// //   $(e.relatedTarget).removeClass('active'); // previous tab
+// // });

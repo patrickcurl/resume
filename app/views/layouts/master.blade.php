@@ -7,7 +7,7 @@
         <meta name="keywords" content="">
         <meta name="author" content="">
 
-        <title>Freelancer - Responsive Resume &amp; Portfolio</title>
+        <title>Patrick Curl: Geek, Hacker, Dev, Marketer, Entrepreneur</title>
 
         <!-- Styles
         ================================================== -->
@@ -421,22 +421,6 @@
         <script src="js/jquery.masonry.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/freelancer.js"></script>
-<script type="text/javascript">//<![CDATA[
-$(window).load(function(){
 
-$('a[name=popover]').popover({
-    trigger: "click",
-    title: "More info..."
-});
-$(function () {
-    $('#myTab a:last').tab('show')
-  });
-$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-  $(e.target).addClass('active'); // activated tab
-  $(e.relatedTarget).removeClass('active'); // previous tab
-})
-//]]>
-
-</script>
     </body>
 </html>
