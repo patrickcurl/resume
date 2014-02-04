@@ -36,7 +36,7 @@ function init_masonry(){
 
 $('a[href="#portfolio-tab"]').on('shown', function (e){
 
-    // init_masonry();
+    init_masonry();
 
     window.setTimeout(function() {
 

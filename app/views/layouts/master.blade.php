@@ -13,7 +13,9 @@
         ================================================== -->
         <link rel='stylesheet' type="text/css" media="screen" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700">
         <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap-responsive.min.css">
+        <link href="http://getbootstrap.com/2.3.2/assets/js/google-code-prettify/prettify.css" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap-modal-bs3patch.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap-modal.css">
         <link rel="stylesheet" type="text/css" media="screen" href="css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" media="screen" href="css/freelancer.css">
 
@@ -26,10 +28,131 @@
         <!--[if IE 7]>
           <link rel="stylesheet" href="css/font-awesome-ie7.min.css">
         <![endif]-->
+        <style>
+body {background:#fff; font-family:Verdana, Geneva, sans-serif; font-size:12px; line-height:20px; color:#545353;}
+
+.contContainer {
+    width:960px;
+    margin:0px auto;
+    position:relative;
+    z-index:12;
+    }
+
+/* Positions the contact form so it doesn't interfere with any other content, as well as a z-index above any other elements on the page */
+#contactFormContainer {
+    position:absolute;
+    left:368px;
+    z-index:12;
+    }
+
+/* Hides the whole contact form until needed */
+#contactForm {
+    height:389px;width:658px;
+    background:#515151 url(../img/birdy.jpg) no-repeat 241px 11px;
+    border:1px solid #929191;
+    padding:7px 12px;
+    color:#fff;
+    display:none;
+    }
+
+/* Loading bar that will appear while the ajax magic is happening */
+.bar{
+    display:none;
+    background:url(../img/ajax-loader.gif) no-repeat center;
+    margin-top:100px;
+    height:40px; width:230px;
+    }
+
+/* Hides the confirmation message until needed */
+#messageSent {display:none;}
+
+/* This hides the form validation alert messages until needed */
+#contactForm span {
+    display:none;
+    font-size:9px;
+    line-height:10px;
+    padding-left:6px;
+    color:#f5c478;
+    }
+
+/* Some styling for the contact button */
+#contactFormContainer .contact {
+    height:47px; width:211px;
+    background:url(../img/contact_me.png);
+    position:absolute;
+    left:368px; bottom:-44px;
+    cursor:pointer;
+    }
+
+/* Hides the darkening layer for the Modal effect. The z-index is necessary for layering purposes, and be sure to keep the positioning/height/width the same */
+#backgroundPopup{
+    display:none;
+    position:fixed;
+    _position:absolute;
+    height:100%; width:100%;
+    top:0; left:0;
+    background:#000;
+    z-index:11;
+    }
+
+/* Form styling from here on out. There is nothing in here that you HAVE to use to get this to work */
+#contactForm textarea, #contactForm input {
+    width:180px;
+    background:#6d6d6d url(../img/contact_input.png) repeat-x top;
+    color:#fff;
+    border:1px solid #8a8a8a;
+    height:15px;
+    line-height:14px;
+    font-size:11px;
+    padding:2px 2px 0px;
+    }
+#contactForm input {background-position:0px -20px;}
+#contactForm textarea {height:114px; font-family:Verdana, Geneva, sans-serif;}
+#contactForm .submit {
+    border:1px solid #aba8a8;
+    background:#e5e5e5;
+    text-transform:uppercase;
+    color:#4d4d4d;
+    font-weight:bold;
+    padding:7px 16px 7px 14px;
+    height:37px; width:124px;
+    cursor:pointer;
+    float:left;
+    margin-top:196px;
+    }
+#contactForm .submit:active {background:#cacaca; }
+#contactForm label {padding-left:4px; font-weight:bold;}
+#contactForm p {padding-bottom:8px;}
+#contactForm .input_boxes {float:left; width:204px;}
+
+#dummycontent {padding-top:100px; height:900px; position:relative;}
+.bottomlink {position:absolute; bottom:0;}
+        </style>
     </head>
 
     <body>
-        <div class="container resume">
+
+<div class="contContainer static-top">
+    <div id="contactFormContainer">
+        <div id="contactForm">
+            <div class="loader"></div>
+            <div class="bar"></div>
+            <form action="/mail" class="contactForm" name="cform" method="post">
+                <p>Talk to me about anything. If you&rsquo;d like to work with me, or <br />even if you just need a hug, I&rsquo;ll get back to you shortly.</p>
+                <div class="input_boxes">
+                    <p><label for="name">Name</label><span class="name-missing">Please enter your name</span><br />
+                    <input id="name" type="text" value="" name="name"  /></p>
+                    <p><label for="e-mail">E-mail</label><span class="email-missing">Please enter a valid e-mail</span><br />
+                    <input id="e-mail" type="text" value="" name="email" /></p>
+                    <p><label for="message">Message</label><span class="message-missing">Say something!</span><br />
+                    <textarea id="message" rows="" cols="" name="message"></textarea></p>
+                 </div>
+                 <input class="submit" type="submit" name="submit" value="Submit Form" onfocus="this.blur()"  />
+            </form>
+      </div>
+      <div class="contact"></div>
+  </div>
+        <div class="container resume" >
 
             <!-- Heading
             ================================================== -->
@@ -45,7 +168,7 @@
                         <strong><i class="icon-comment-alt"></i>&nbsp;Greetings</strong> If you made it to this page, it probably means you need a KICKASS developer, and of course you came knocking on my virtual door. I've been designing web pages, back when geocities was popular(circa 1998).</p><p>I've Spent a good decade just doing odd jobs, and installing apps (Drupal, OsCommerce, Wordpress, PHPNuke, Joomla, etc..). The past two years I've been highly devoted to learning Object oriented coding, and standard best practices : i.e. -unlearn my hacking/spaghetti coding ways for more efficient methods.</p><p>I've developed and some small apps on Rails, and Laravel, and enjoy both immensely. PHP for the longest time was daunting to create a full-scale project from scratch, Laravel makes it much easier, and Rails is just always easy and fun - I especially like Ruby's easy to read syntax.</p>Am I an expert? Nah - I'm learning new stuff daily, and asking tons of questions in IRC(gold-mine).
                 </div>
 
-                <div class="col-md-3 col-md-offset-1 services">
+                <div class="col-md-3 col-md-offset-1 services" style="margin-top:30px;">
                     <img class="layout-topborder-screen" src="img/css/topborder-screen.png" alt="corner top right">
                     <h2 class="my-services">My Services <i class="fa fa-cogs"></i></h2>
                     <ul>
@@ -314,11 +437,21 @@
 
                             <div class="row">
                               <div class="col-xs-6 col-md-4">
-                                 <a href="#" class="thumbnail">
+                                 <a href="#" class="thumbnail" data-toggle="modal" data-target="#myModal">
                                     <img src="img/portfolio/rab/recycleabook-ss.png" alt="...">
                                   </a>
                                 </div>
-                            </div><!-- end of portfolio -->
+                            </div>
+                            <div class="full-width" style="position: relative; overflow: hidden">
+            <h3>Full Width</h3>
+            <pre class="pre-scrollable prettyprint linenums" data-source="#full-width">
+            </pre>
+            <div class="text-center">
+            <button class="demo btn btn-primary btn-lg" data-toggle="modal" href="#full-width">View Demo</button>
+            </div>
+          </div>
+
+                            <!-- end of portfolio -->
 
 
                         </div><!-- end of portfolio-tab -->
@@ -409,17 +542,36 @@
                         </div><!-- end of contact-tab -->
 
                     </div><!-- end of tab-content ??? -->
-
+<!-- Modal -->
+                      <div id="full-width" class="modal container fade" tabindex="-1" style="display: none;">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h4 class="modal-title">Full Width</h4>
+  </div>
+  <div class="modal-body">
+    <p>This modal will resize itself to the same dimensions as the container class.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin ipsum ac ante fermentum suscipit. In ac augue non purus accumsan lobortis id sed nibh. Nunc egestas hendrerit ipsum, et porttitor augue volutpat non. Aliquam erat volutpat. Vestibulum scelerisque lobortis pulvinar. Aenean hendrerit risus neque, eget tincidunt leo. Vestibulum est tortor, commodo nec cursus nec, vestibulum vel nibh. Morbi elit magna, ornare placerat euismod semper, dignissim vel odio. Phasellus elementum quam eu ipsum euismod pretium.</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" data-dismiss="modal" class="btn btn-default">Close</button>
+    <button type="button" class="btn btn-primary">Save changes</button>
+  </div>
+</div>
         </div><!-- end of container -->
 
-
-
+        <div id="backgroundPopup"></div>
         <!-- Javascript
         ================================================== -->
         <script src="http://maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript"></script>
         <script src="js/jquery-1.11.0.min.js"></script>
+
+
         <script src="js/jquery.masonry.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap2.min.js"></script>
+        <script src="js/bootstrap-modalmanager.js"></script>
+
+        <script src="js/bootstrap-modal.js"></script>
+        <script src="js/scripts.js" type="text/javascript"></script>
         <script src="js/freelancer.js"></script>
 
     </body>

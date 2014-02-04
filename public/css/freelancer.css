@@ -201,7 +201,7 @@ a.thumbnail{
 
 /* portfolio tab */
 #portfolio-tab {
-  padding-top: 17px;
+  padding: 15px;
   margin-bottom: -20px;
 }
 .portfolio-item {
@@ -506,20 +506,4 @@ a.thumbnail{
   text-decoration:none;
   width:18px;
 }
-#demo-box a {
-  text-decoration:none;
-}
 
-/* demo only - background patterns */
-.bgnoise_lg, #bgnoise_lg { background:url(../img/css/patterns/bgnoise_lg.png) repeat; }
-.escheresque, #escheresque { background:url(../img/css/patterns/escheresque.png) repeat; }
-.farmer, #farmer { background:url(../img/css/patterns/farmer.png) repeat; }
-.grey_sandbag, #grey_sandbag { background:url(../img/css/patterns/grey_sandbag.png) repeat; }
-.grid, #grid { background:url(../img/css/patterns/grid.png) repeat; }
-.irongrip, #irongrip { background:url(../img/css/patterns/irongrip.png) repeat; }
-.kindajean, #kindajean { background:url(../img/css/patterns/kindajean.png) repeat; }
-.light_alu, #light_alu { background:url(../img/css/patterns/light_alu.png) repeat; }
-.little_pluses, #little_pluses { background:url(../img/css/patterns/little_pluses.png) repeat; }
-.noisy_grid, #noisy_grid { background:url(../img/css/patterns/noisy_grid.png) repeat; }
-.purty_wood, #purty_wood { background:url(../img/css/patterns/purty_wood.png) repeat; }
-.retro_intro, #retro_intro { background:url(../img/css/patterns/retro_intro.png) repeat; }
