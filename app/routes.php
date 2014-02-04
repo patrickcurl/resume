@@ -17,31 +17,27 @@ Route::get('/', function()
 });
 
 Route::post('/mail', function(){
-    $name = stripcslashes($_POST['name']);
-    $emailAddr = stripcslashes($_POST['email']);
-    $issue = stripcslashes($_POST['issue']);
-    $comment = stripcslashes($_POST['message']);
-    $subject = stripcslashes($_POST['subject']);
-
+    $data = array();
+    $data['name'] = stripcslashes($_POST['name']);
+    $data['email'] = stripcslashes($_POST['email']);
+    $data['body'] = stripcslashes($_POST['message']);
+    $data['ip'] = $_SERVER[REMOTE_ADDR];
+    $data['sentFrom'] = $_SERVER[HTTP_HOST];
+    // $subject = stripcslashes($_POST['subject']);
+    Mail::send('emails.received', $data, function($message)
+    {
+        $message->to('patrickwcurl@gmail.com', 'Patrick Curl')->subject('You got one!');
+    });
+    Mail::send('emails.sent', $data, function($message)){
+        $message->to($data['email'], $data['name'])->subject('Thanks for reaching out to me, I\'ll be in touch shortly.');
+    }
     // Set headers
-    $headers  = 'MIME-Version: 1.0' . "\r\n";
-    $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 
     // Format message
-    $contactMessage =
-    "<div>
-    <p><strong>Name:</strong> $name <br />
-    <strong>E-mail:</strong> $emailAddr <br />
-    <strong>Issue:</strong> $issue </p>
-
-    <p><strong>Message:</strong> $comment </p>
-
-    <p><strong>Sending IP:</strong> $_SERVER[REMOTE_ADDR]<br />
-    <strong>Sent via:</strong> $_SERVER[HTTP_HOST]</p>
-    </div>";
+    // Todo : : TRY CATch return true/false
 
     // Send and check the message status
-    $response = (mail('patrickwcurl@gmail.com', $subject, $contactMessage, $headers) ) ? "success" : "failure" ;
+
     $output = json_encode(array("response" => $response));
 
     //header('content-type: application/json; charset=utf-8');
