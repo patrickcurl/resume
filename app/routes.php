@@ -21,16 +21,28 @@ Route::post('/mail', function(){
     $data['name'] = stripcslashes($_POST['name']);
     $data['email'] = stripcslashes($_POST['email']);
     $data['body'] = stripcslashes($_POST['message']);
-    $data['ip'] = $_SERVER[REMOTE_ADDR];
-    $data['sentFrom'] = $_SERVER[HTTP_HOST];
+    $data['ip'] = $_SERVER['REMOTE_ADDR'];
+    $data['sentFrom'] = $_SERVER['HTTP_HOST'];
     // $subject = stripcslashes($_POST['subject']);
-    Mail::send('emails.received', $data, function($message)
+    try{
+        Mail::send('emails.received', $data, function($message)
     {
+
         $message->to('patrickwcurl@gmail.com', 'Patrick Curl')->subject('You got one!');
+
     });
-    Mail::send('emails.sent', $data, function($message)){
-        $message->to($data['email'], $data['name'])->subject('Thanks for reaching out to me, I\'ll be in touch shortly.');
+
+    Mail::send('emails.sent', $data, function($message) use ($data) {
+
+            $message->to($data['email'], $data['name'])->subject('Thanks for reaching out to me, I\'ll be in touch shortly.');
+
+    });
+        return Response::json(array('success' => true));
+    } catch(Exception $e){
+        return Response::json(array('success' => false, 'reason' => $e ));
     }
+
+
     // Set headers
 
     // Format message

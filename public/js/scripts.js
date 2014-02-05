@@ -39,7 +39,7 @@ $(document).ready(function(){
    //submission scripts
   $('.contactForm').submit( function(){
 		//statements to validate the form
-		var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+		var filter = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 		var email = document.getElementById('e-mail');
 		if (!filter.test(email.value)) {
 			$('.email-missing').show();
@@ -63,19 +63,20 @@ $(document).ready(function(){
 			$('.bar').css({display:'block'});
 
 			//send the ajax request
-			$.post('mail.php',{name:$('#name').val(),
+			$.post('/mail',{name:$('#name').val(),
 							  email:$('#e-mail').val(),
 							  message:$('#message').val()},
 
 			//return the data
 			function(data){
 			  //hide the graphic
+			  var msg = "<div class='container' style='margin-top:200px;'>Message Sent!</div>";
 			  $('.bar').css({display:'none'});
-			  $('.loader').append(data);
+			  $('.loader').append(msg);
 			});
 
 			//waits 2000, then closes the form and fades out
-			setTimeout('$("#backgroundPopup").fadeOut("slow"); $("#contactForm").slideUp("slow")', 2000);
+			setTimeout('$("#backgroundPopup").fadeOut("slow"); $("#contactForm").slideUp("slow")', 3000);
 
 			//stay on the page
 			return false;
