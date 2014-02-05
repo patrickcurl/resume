@@ -186,7 +186,7 @@ body {background:#fff; font-family:Verdana, Geneva, sans-serif; font-size:12px; 
                         <li><span class="phone-480px"><i class="icon-pushpin"></i></span><a href="https://github.com/pixelgremlins/CodeEvalSolutions">CodeEval Solutions</a></li>
 
                     </ul>
-                    <a href="files/my_visual_resume.pdf" class="btn btn-info">Download Resume</a>
+                    <a href="files/Resume_PatrickCurl_02_05_14.pdf" class="btn btn-info">Download Resume</a>
                 </div>
 
             </div>
