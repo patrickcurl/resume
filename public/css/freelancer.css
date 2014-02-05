@@ -254,7 +254,7 @@ a.thumbnail{
 .portfolio-links {
   margin-top: 10px !important;
 }
-
+.portfolio-modal {width: 250px;height:300px;}
 /* contact tab */
 #my-location {
   border: 1px solid #D8D8D8;

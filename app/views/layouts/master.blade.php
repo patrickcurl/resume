@@ -132,7 +132,7 @@ body {background:#fff; font-family:Verdana, Geneva, sans-serif; font-size:12px; 
 
     <body>
 
-<div class="contContainer static-top">
+<div class="contContainer hidden-xs">
     <div id="contactFormContainer">
         <div id="contactForm">
             <div class="loader"></div>
@@ -152,23 +152,24 @@ body {background:#fff; font-family:Verdana, Geneva, sans-serif; font-size:12px; 
       </div>
       <div class="contact"></div>
   </div>
+  </div>
         <div class="container resume" >
 
             <!-- Heading
             ================================================== -->
             <div class="row heading">
 
-                <div class="col-md-8">
+                <div class="col-xs-11 col-md-8">
                     <img class="my-picture" src="img/patrick-curl.jpg" alt="Photo of Patrick Curl">
                     <img class="layout-topborder-480px" src="img/css/topborder-480px.png" alt="corner top right">
                     <img class="layout-topborder-320px" src="img/css/topborder-320px.png" alt="corner top right">
                     <h1 class="my-name">Patrick Curl</h1>
                     <h2 class="my-profession">Developer & Web Marketer.</h2>
                     <p class="my-message">
-                        <strong><i class="icon-comment-alt"></i>&nbsp;Greetings</strong> If you made it to this page, it probably means you need a KICKASS developer, and of course you came knocking on my virtual door. I've been designing web pages, back when geocities was popular(circa 1998).</p><p>I've Spent a good decade just doing odd jobs, and installing apps (Drupal, OsCommerce, Wordpress, PHPNuke, Joomla, etc..). The past two years I've been highly devoted to learning Object oriented coding, and standard best practices : i.e. -unlearn my hacking/spaghetti coding ways for more efficient methods.</p><p>I've developed and some small apps on Rails, and Laravel, and enjoy both immensely. PHP for the longest time was daunting to create a full-scale project from scratch, Laravel makes it much easier, and Rails is just always easy and fun - I especially like Ruby's easy to read syntax.</p>Am I an expert? Nah - I'm learning new stuff daily, and asking tons of questions in IRC(gold-mine).
+                        <strong><i class="icon-comment-alt"></i>&nbsp;Greetings</strong> If you made it to this page, it probably means you need a KICKASS developer, and of course you came knocking on my virtual door. I've been designing web pages, back when geocities was popular(circa 1998).</p><p>I've Spent a good decade just doing mostly freelance work, and installing apps (Drupal, OsCommerce, Wordpress, PHPNuke, Joomla, etc..).  Hacking/Designing already built cms's was mostly all I was good at - but I wanted to be better - so for the past two years I've been highly devoted to learning Object oriented coding, and standard best practices : i.e. -unlearn my hacking/spaghetti coding ways for more efficient methods and best practices. I need to get better at tdd, and learn agile methods - I'm hoping for my next career to not only be some place I can write aswesome code, but also where I can learn a lot. .</p><p>I've developed small apps and side projects on Rails, and Laravel, and enjoy both immensely. PHP for the longest time was daunting to create a full-scale project from scratch, Laravel makes it much easier, and Rails is just always easy and fun - I especially like Ruby's easy to read syntax.</p>Why did I go w/ Laravel  over Rails? --deployability, my current company was w/ hostgator at the time, which couldn't house a new ruby rails app.Am I an expert? Nah - I'm learning new stuff daily, and asking tons of questions in IRC(gold-mine).
                 </div>
 
-                <div class="col-md-3 col-md-offset-1 services" style="margin-top:30px;">
+                <div class="col-xs-8 col-md-3 col-md-offset-1 services" style="margin-top:30px;">
                     <img class="layout-topborder-screen" src="img/css/topborder-screen.png" alt="corner top right">
                     <h2 class="my-services">My Services <i class="fa fa-cogs"></i></h2>
                     <ul>
@@ -185,6 +186,7 @@ body {background:#fff; font-family:Verdana, Geneva, sans-serif; font-size:12px; 
                         <li><span class="phone-480px"><i class="icon-pushpin"></i></span><a href="https://github.com/pixelgremlins/CodeEvalSolutions">CodeEval Solutions</a></li>
 
                     </ul>
+                    <a href="files/my_visual_resume.pdf" class="btn btn-info">Download Resume</a>
                 </div>
 
             </div>
@@ -263,7 +265,7 @@ body {background:#fff; font-family:Verdana, Geneva, sans-serif; font-size:12px; 
                             </div>
 
                             <!-- column 3 -->
-                            <div class="col-md-4">
+                            <div class="col-xs-8 col-md-4">
 
                                 <h3 class="my-caption">Graphic &amp; Multi Media Skills</h3>
 
@@ -437,18 +439,13 @@ body {background:#fff; font-family:Verdana, Geneva, sans-serif; font-size:12px; 
 
                             <div class="row">
                               <div class="col-xs-6 col-md-4">
-                                 <a href="#" class="thumbnail" data-toggle="modal" data-target="#myModal">
+                                 <a href="#full-width" class="thumbnail" data-toggle="modal" >
                                     <img src="img/portfolio/rab/recycleabook-ss.png" alt="...">
                                   </a>
                                 </div>
                             </div>
                             <div class="full-width" style="position: relative; overflow: hidden">
-            <h3>Full Width</h3>
-            <pre class="pre-scrollable prettyprint linenums" data-source="#full-width">
-            </pre>
-            <div class="text-center">
-            <button class="demo btn btn-primary btn-lg" data-toggle="modal" href="#full-width">View Demo</button>
-            </div>
+       
           </div>
 
                             <!-- end of portfolio -->
@@ -546,16 +543,15 @@ body {background:#fff; font-family:Verdana, Geneva, sans-serif; font-size:12px; 
                       <div id="full-width" class="modal container fade" tabindex="-1" style="display: none;">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-    <h4 class="modal-title">Full Width</h4>
+    <h4 class="modal-title">RecycleABook.com</h4>
   </div>
   <div class="modal-body">
-    <p>This modal will resize itself to the same dimensions as the container class.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin ipsum ac ante fermentum suscipit. In ac augue non purus accumsan lobortis id sed nibh. Nunc egestas hendrerit ipsum, et porttitor augue volutpat non. Aliquam erat volutpat. Vestibulum scelerisque lobortis pulvinar. Aenean hendrerit risus neque, eget tincidunt leo. Vestibulum est tortor, commodo nec cursus nec, vestibulum vel nibh. Morbi elit magna, ornare placerat euismod semper, dignissim vel odio. Phasellus elementum quam eu ipsum euismod pretium.</p>
+    <a href="img/portfolio/rab/RecycleABook.com-backend-files.png" >
+        <img src="img/portfolio/rab/RecycleABook.com-backend-files.png" class="img-thumbnail portfolio-modal" />
+    </a>
+    <img src="img/portfolio/rab/recycleabook-ss.png" class="img-thumbnail portfolio-modal"  />
   </div>
-  <div class="modal-footer">
-    <button type="button" data-dismiss="modal" class="btn btn-default">Close</button>
-    <button type="button" class="btn btn-primary">Save changes</button>
-  </div>
+ 
 </div>
         </div><!-- end of container -->
 
