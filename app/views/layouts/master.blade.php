@@ -187,6 +187,9 @@ body {background:#fff; font-family:Verdana, Geneva, sans-serif; font-size:12px; 
 
                     </ul>
                     <a href="files/Resume_PatrickCurl_02_05_14.pdf" class="btn btn-info">Download Resume</a>
+
+                    <strong>Salary Requirement : $70,000 + Relocation if Required.</strong>
+                    <br />* Negotiable.
                 </div>
 
             </div>
@@ -445,7 +448,7 @@ body {background:#fff; font-family:Verdana, Geneva, sans-serif; font-size:12px; 
                                 </div>
                             </div>
                             <div class="full-width" style="position: relative; overflow: hidden">
-       
+
           </div>
 
                             <!-- end of portfolio -->
@@ -468,8 +471,8 @@ body {background:#fff; font-family:Verdana, Geneva, sans-serif; font-size:12px; 
 
                                     <h3 class="my-caption">Personal Information</h3>
                                     <h4 class="my-info">Birthday <span>November 14, 1979</span></h4>
-                                    <h4 class="my-info">Address <span>54 Bond St</span></h4>
-                                    <h4 class="my-info">&nbsp;<span>Dayton, OH 45405</span></h4>
+                                    <h4 class="my-info">Address <span>3653 Canary Way</span></h4>
+                                    <h4 class="my-info">&nbsp;<span>Eagle Mountain, UT 84005</span></h4>
 
                                 </div>
 
@@ -480,11 +483,6 @@ body {background:#fff; font-family:Verdana, Geneva, sans-serif; font-size:12px; 
 
                                     <h4 class="my-info">
                                         <i class="icon-phone"></i> Phone
-                                        <span>937.223.5538</span>
-                                    </h4>
-
-                                    <h4 class="my-info">
-                                        <i class="icon-signal"></i> Cell
                                         <span>937.422.8646</span>
                                     </h4>
 
@@ -551,7 +549,7 @@ body {background:#fff; font-family:Verdana, Geneva, sans-serif; font-size:12px; 
     </a>
     <img src="img/portfolio/rab/recycleabook-ss.png" class="img-thumbnail portfolio-modal"  />
   </div>
- 
+
 </div>
         </div><!-- end of container -->
 
