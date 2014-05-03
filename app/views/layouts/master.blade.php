@@ -515,19 +515,19 @@ body {background:#fff; font-family:Verdana, Geneva, sans-serif; font-size:12px; 
                                     <h4 class="my-info">
                                         <i class="icon-facebook"></i>
                                         <span>
-                                            <a href="http://www.facebook.com/patrickwcurl" target="_blank">facebook</a>
+                                            <a href="http://www.facebook.com/patrickwcurl" target="_blank">Facebook</a>
                                         </span>
                                     </h4>
                                     <h4 class="my-info">
                                         <i class="icon-twitter"></i>
                                         <span>
-                                            <a href="http://www.twitter.com/patrickcurl" target="_blank">Twitter</a>
+                                            <a href="http://www.twitter.com/patrickcurl" target="_blank">Twitter (12k+ followers)</a>
                                         </span>
                                     </h4>
                                     <h4 class="my-info">
                                         <i class="icon-linkedin"></i>
                                         <span>
-                                            <a href="http://www.linkedin.com/in/patrickcurl" target="_blank">LinkedIn</a>
+                                            <a href="http://www.linkedin.com/in/patrickcurl" target="_blank">LinkedIn (7500+ connections)</a>
                                         </span>
                                     </h4>
 
