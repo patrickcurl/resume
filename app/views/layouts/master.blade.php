@@ -3,11 +3,11 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="">
-        <meta name="keywords" content="">
-        <meta name="author" content="">
+        <meta name="description" content="Ruby on Rails developer for hire, PHP Developer for Hire - Patrick Curl is a Rails developer, looking for his next big move. He has 10 + years experience in php, and 2 years experiecne using/self-learning Rails">
+        <meta name="keywords" content="Ruby on Rails Resume, PHP Resume, Laravel Resume, AngularJS Resume, AngularJS Developer Resume, Ruby on Rails Developer Resume">
+        <meta name="author" content="Patrick Curl">
 
-        <title>Patrick Curl: Geek, Hacker, Dev, Marketer, Entrepreneur</title>
+        <title>Ruby on Rails Developer Resume | PHP Developer For Hire</title>
 
         <!-- Styles
         ================================================== -->
@@ -138,7 +138,7 @@ body {background:#fff; font-family:Verdana, Geneva, sans-serif; font-size:12px; 
             <div class="loader"></div>
             <div class="bar"></div>
             <form action="/mail" class="contactForm" name="cform" method="post">
-                <p>Talk to me about anything. If you&rsquo;d like to work with me, or <br />even if you just need a hug, I&rsquo;ll get back to you shortly.</p>
+                <p>Ruby on Rails Developer for hire : Need a kickass developer? Drop me a line!</p>
                 <div class="input_boxes">
                     <p><label for="name">Name</label><span class="name-missing">Please enter your name</span><br />
                     <input id="name" type="text" value="" name="name"  /></p>
@@ -160,19 +160,20 @@ body {background:#fff; font-family:Verdana, Geneva, sans-serif; font-size:12px; 
             <div class="row heading">
 
                 <div class="col-xs-11 col-md-8">
-                    <img class="my-picture" src="img/patrick-curl.jpg" alt="Photo of Patrick Curl">
+                    <img class="my-picture" src="img/patrick-curl.jpg" alt="Ruby on Rails Developer Resume">
                     <img class="layout-topborder-480px" src="img/css/topborder-480px.png" alt="corner top right">
                     <img class="layout-topborder-320px" src="img/css/topborder-320px.png" alt="corner top right">
                     <h1 class="my-name">Patrick Curl</h1>
-                    <h2 class="my-profession">Developer & Web Marketer.</h2>
+                    <h2 class="my-profession">Ruby on Rails Developer.</h2>
                     <p class="my-message">
-                        <strong><i class="icon-comment-alt"></i>&nbsp;Greetings</strong> If you made it to this page, it probably means you need a KICKASS developer, and of course you came knocking on my virtual door. I've been designing web pages, back when geocities was popular(circa 1998).</p><p>I've Spent a good decade just doing mostly freelance work, and installing apps (Drupal, OsCommerce, Wordpress, PHPNuke, Joomla, etc..).  Hacking/Designing already built cms's was mostly all I was good at - but I wanted to be better - so for the past two years I've been highly devoted to learning Object oriented coding, and standard best practices : i.e. -unlearn my hacking/spaghetti coding ways for more efficient methods and best practices. I need to get better at tdd, and learn agile methods - I'm hoping for my next career to not only be some place I can write aswesome code, but also where I can learn a lot. .</p><p>I've developed small apps and side projects on Rails, and Laravel, and enjoy both immensely. PHP for the longest time was daunting to create a full-scale project from scratch, Laravel makes it much easier, and Rails is just always easy and fun - I especially like Ruby's easy to read syntax.</p>Why did I go w/ Laravel  over Rails? --deployability, my current company was w/ hostgator at the time, which couldn't house a new ruby rails app. Now that we've migrated to Linux VPS, who knows? </p><p>Am I an expert? Nah - But I know where to get free access to developers, and and devops, when I hit the inevitable brick wall(IRC CHAT) and I'm always focused on learning how things work. </p>
+                        <strong><i class="icon-comment-alt"></i>&nbsp;Greetings</strong> If you made it to this page, it probably means you need a KICKASS Ruby on Rails developer, and of course you came knocking on my virtual door. I've been designing web pages, back when geocities was popular(circa 1998).</p><p>I've Spent a good decade just doing mostly freelance work, and installing apps (Drupal, OsCommerce, Wordpress, PHPNuke, Joomla, etc..).  Hacking/Designing already built cms's was mostly all I was good at - but I wanted to be better - so for the past two years I've been highly devoted to learning Object oriented coding, and standard best practices : i.e. -unlearn my hacking/spaghetti coding ways for more efficient methods and best practices. I'm hoping for my next career to not only be some place I can write aswesome code, but also where I can learn a lot. .</p><p>I've developed small apps and side projects on Ruby on Rails, and Laravel a PHP framework that is very similar to Rails, and enjoy both immensely. PHP for the longest time was daunting to create a full-scale project from scratch, Laravel makes it much easier, and Ruby on Rails is just always easy and fun - I especially like Ruby's  easy to read syntax.</p>Why did I go w/ Laravel over Rails for my latest projects? --deployability, my current company was w/ hostgator at the time, which couldn't house a new Ruby on Rails app. Now that we've migrated to Linux VPS, who knows? </p><p>Am I an expert? Nah - But I know where to get free access to developers, and devops, when I hit the inevitable brick wall(IRC CHAT) and I'm always focused on learning how things work. </p>
                 </div>
 
                 <div class="col-xs-8 col-md-3 col-md-offset-1 services" style="margin-top:30px;">
                     <img class="layout-topborder-screen" src="img/css/topborder-screen.png" alt="corner top right">
                     <h2 class="my-services">My Services <i class="fa fa-cogs"></i></h2>
                     <ul>
+			<li><span class="phone-480px"><li class="icon-pushpin"></i></span>Ruby on Rails Development</li>
                         <li><span class="phone-480px"><i class="icon-pushpin"></i></span>MVPs</li>
                         <li><span class="phone-480px"><i class="icon-pushpin"></i></span>Mockups</li>
                         <li><span class="phone-480px"><i class="icon-pushpin"></i></span>SEO Consulting</li>
@@ -184,7 +185,7 @@ body {background:#fff; font-family:Verdana, Geneva, sans-serif; font-size:12px; 
                         <li><span class="phone-480px"><i class="icon-pushpin"></i></span><a href="https://github.com/pixelgremlins/learn_ruby">Learn Ruby Solutions</a></li>
                         <li><span class="phone-480px"><i class="icon-pushpin"></i></span><a href="https://github.com/pixelgremlins/mykoans">Ruby Koans (Solved)</a></li>
                         <li><span class="phone-480px"><i class="icon-pushpin"></i></span><a href="https://github.com/pixelgremlins/CodeEvalSolutions">CodeEval Solutions</a></li>
-
+		
                     </ul>
                     <a href="files/Resume_PatrickCurl_02_05_14.pdf" class="btn btn-info">Download Resume</a>
                 </div>
