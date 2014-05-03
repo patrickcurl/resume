@@ -47,7 +47,7 @@ $('a[href="#portfolio-tab"]').on('shown', function (e){
 });
 
 /* google maps */
-var myLatlng = new google.maps.LatLng(39.777506,-84.200659);
+var myLatlng = new google.maps.LatLng(40.300501, -112.01186630000001);
 
 var mapInitOpts = {
     mapTypeId: google.maps.MapTypeId.ROADMAP,
@@ -87,16 +87,16 @@ function center_map(){
 
 };
 
-// $(window).load(function(){
+$(window).load(function(){
 
-// $('a[name=popover]').popover({
-//     trigger: "click",
-//     title: "More info..."
-// });
+$('a[name=popover]').popover({
+     trigger: "click",
+     title: "More info..."
+ });
 // $(function () {
 //     $('#myTab a:last').tab('show')
 //   });
 // // $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
 // //   $(e.target).addClass('active'); // activated tab
 // //   $(e.relatedTarget).removeClass('active'); // previous tab
-// // });
+ });
